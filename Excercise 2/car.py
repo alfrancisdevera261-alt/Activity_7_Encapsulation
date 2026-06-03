@@ -36,3 +36,8 @@ class Car:
             "total_accelerations" : self.__total_accelerations,
             "total_brakes"        : self.__total_brakes,
         }
+        
+    def set_year_model(self, year_model: int):
+        if not isinstance(year_model, int) or year_model < 1886:
+            raise ValueError("Year model must be an integer >= 1886.")
+        self.__year_model = year_model
