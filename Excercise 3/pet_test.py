@@ -68,3 +68,18 @@ def demo_setters(my_pet: Pet):
         print(f"  [ValueError caught] {e}")
 
     print()
+    
+def main():
+    print_separator("PET CLASS DEMO")
+    print()
+
+    my_pet = Pet()
+
+    print("  Let's register your pet!\n")
+    my_pet.set_name(prompt_name())               # stores in __name
+    my_pet.set_animal_type(prompt_animal_type()) # stores in __animal_type
+    my_pet.set_age(prompt_age())                 # stores in __age
+
+    display_pet(my_pet)
+
+    demo_setters(my_pet)
