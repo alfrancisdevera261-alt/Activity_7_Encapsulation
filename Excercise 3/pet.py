@@ -69,3 +69,18 @@ class Pet:
             if a == 0:  return "newborn"
             # "year" vs "years" — handle singular correctly.
             return f"{a} year{'s' if a != 1 else ''} old"
+    
+    def __str__(self) -> str:
+        return (
+            f"Pet: {self.__name} | "
+            f"Type: {self.__animal_type} | "
+            f"Age: {self.__age} yr(s) [{self.age_description()}]"
+        )
+
+    # STEP 11: __repr__ is used by the debugger — shows constructor-like form.
+    def __repr__(self) -> str:
+        return (
+            f"Pet(name='{self.__name}', "
+            f"animal_type='{self.__animal_type}', "
+            f"age={self.__age})"
+        )
