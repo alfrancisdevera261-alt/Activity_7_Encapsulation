@@ -28,4 +28,11 @@ class Car:
     def get_speed(self) -> int:
         return self.__speed
     
-    
+    def get_stats(self) -> dict:
+        return {
+            "year_model"          : self.__year_model,
+            "make"                : self.__make,
+            "speed"               : self.__speed,
+            "total_accelerations" : self.__total_accelerations,
+            "total_brakes"        : self.__total_brakes,
+        }
