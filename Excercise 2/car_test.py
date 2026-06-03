@@ -44,3 +44,23 @@ def main():
     print(f"  Final Speed         : {stats['speed']} mph")
     print(f"  Total Accelerations : {stats['total_accelerations']}")
     print(f"  Total Brakes        : {stats['total_brakes']}")
+
+    print()
+    print_separator("EXTRAS")
+    print()
+
+    for _ in range(4):
+        my_car.accelerate()
+    print(f"  After accelerating 4 more times: {my_car.get_speed()} mph")
+
+    my_car.full_stop()
+    print(f"  Speed after full stop: {my_car.get_speed()} mph")
+    
+    print()
+    try:
+        bad_car = Car(year_model=1800, make="Horse Carriage")
+    except ValueError as e:
+        print(f"  [ValueError caught] {e}")
+
+    print_separator()
+    print("  All tests complete.\n")
