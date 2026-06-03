@@ -64,3 +64,6 @@ def main():
 
     print_separator()
     print("  All tests complete.\n")
+
+if __name__ == "__main__":
+    main()
