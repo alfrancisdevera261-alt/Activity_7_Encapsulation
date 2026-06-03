@@ -25,3 +25,6 @@ class Fan:
     
     def get_speed_label(self):
         return Fan._SPEED_LABELS.get(self.__speed, "UNKNOWN")
+    
+    def get_on(self):
+        return self.__on
