@@ -45,3 +45,23 @@ def main():
     
     print_separator("DEMO: Validation")
     print()
+    # The setter raises a ValueError, which we catch and print.
+    try:
+        fan1.set_speed(99)
+    except ValueError as e:
+        print(f"  [ValueError caught] {e}")
+
+    #Try to set a negative radius — the setter rejects it.
+    try:
+        fan2.set_radius(-5)
+    except ValueError as e:
+        print(f"  [ValueError caught] {e}")
+
+    #Try to set an empty string as the color — the setter rejects it.
+    try:
+        fan1.set_color("")
+    except ValueError as e:
+        print(f"  [ValueError caught] {e}")
+
+    print_separator()
+    print("  All tests complete.\n")
