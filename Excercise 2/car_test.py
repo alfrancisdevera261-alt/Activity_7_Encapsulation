@@ -7,3 +7,8 @@ def print_separator(title=""):
         print("=" * padding + f" {title} " + "=" * padding)
     else:
         print("=" * width)
+
+def speed_bar(speed, max_speed=200, bar_width=30):
+    filled = int((speed / max_speed) * bar_width)
+    bar = "█" * filled + "░" * (bar_width - filled)
+    return f"[{bar}] {speed:>3} mph"
