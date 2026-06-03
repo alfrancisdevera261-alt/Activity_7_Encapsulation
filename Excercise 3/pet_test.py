@@ -30,3 +30,16 @@ def prompt_age() -> int:
         if raw.isdigit():
             return int(raw)
         print("  ⚠  Age must be a whole non-negative number. Try again.")
+
+def display_pet(my_pet: Pet):
+    print()
+    print_separator("YOUR PET'S INFO")
+    print()
+    print(f"  Name        : {my_pet.get_name()}")
+    print(f"  Animal Type : {my_pet.get_animal_type()}")
+    print(f"  Age         : {my_pet.get_age()} year(s)")
+    print(f"  Life Stage  : {my_pet.age_description()}")
+    print()
+    print(f"  Summary → {my_pet}")
+    print()
+
