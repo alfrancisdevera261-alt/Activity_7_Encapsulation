@@ -41,3 +41,8 @@ class Fan:
                 f"Invalid speed '{speed}'. Use Fan.SLOW, Fan.MEDIUM, or Fan.FAST."
             )
         self.__speed = speed
+        
+    def set_on(self, on):
+        if not isinstance(on, bool):
+            raise TypeError("'on' must be a boolean value (True or False).")
+        self.__on = on
