@@ -60,3 +60,15 @@ class Car:
     def full_stop(self):
         self.__speed = 0
         print(f"  🛑 {self.__make} came to a full stop.")
+        
+    def __str__(self) -> str:
+        return (
+            f"{self.__year_model} {self.__make} | "
+            f"Speed: {self.__speed} mph"
+        )
+
+    def __repr__(self) -> str:
+        return (
+            f"Car(year_model={self.__year_model}, "
+            f"make='{self.__make}', speed={self.__speed})"
+        )
