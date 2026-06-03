@@ -16,3 +16,11 @@ def display_fan(label, fan):
     print(f"  Radius  : {fan.get_radius()} inches")
     print(f"  Status  : {'ON ✔' if fan.get_on() else 'OFF ✘'}")
     print(f"  {fan}")
+    
+def main():
+    print_separator("FAN CLASS DEMO")
+    fan1 = Fan(speed=Fan.FAST, radius=10, color="yellow", on=True)
+    fan2 = Fan(speed=Fan.MEDIUM, radius=5, color="blue", on=False)
+    print("\n[ Initial Fan Configurations ]\n")
+    display_fan("Fan 1", fan1)
+    display_fan("Fan 2", fan2)
