@@ -43,3 +43,28 @@ def display_pet(my_pet: Pet):
     print(f"  Summary → {my_pet}")
     print()
 
+def demo_setters(my_pet: Pet):
+    print_separator("DEMO: Updating via Setters")
+    print()
+
+    original_age = my_pet.get_age()
+
+    my_pet.set_age(original_age + 1)
+    print(f"  Happy birthday {my_pet.get_name()}! "
+          f"Age updated: {original_age} → {my_pet.get_age()}")
+
+    print()
+
+    try:
+        my_pet.set_age(-3)
+    except ValueError as e:
+        print(f"  [ValueError caught] {e}")
+
+    print()
+
+    try:
+        my_pet.set_name("")
+    except ValueError as e:
+        print(f"  [ValueError caught] {e}")
+
+    print()
