@@ -9,3 +9,8 @@ class Fan:
     def __init__(self, speed=None, radius=5.0, color="blue", on=False):
         if speed is None:
             speed = Fan.SLOW
+        
+        self.__speed  = None
+        self.__radius = None
+        self.__color  = None
+        self.__on     = None
