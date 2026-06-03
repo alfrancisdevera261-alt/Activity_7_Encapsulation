@@ -18,6 +18,13 @@ def main():
     
     my_car = Car(year_model=2024, make="Toyota GR86")
 
-    print(f"\n  Vehicle  : {my_car.get_make()}")        # calls get_make()
-    print(f"  Year     : {my_car.get_year_model()}")    # calls get_year_model()
-    print(f"  Speed    : {my_car.get_speed()} mph\n")   # calls get_speed()
+    print(f"\n  Vehicle  : {my_car.get_make()}")        
+    print(f"  Year     : {my_car.get_year_model()}")    
+    print(f"  Speed    : {my_car.get_speed()} mph\n")  
+    
+    print_separator("ACCELERATING  ×5")
+    print()
+    for i in range(1, 6):
+        new_speed = my_car.accelerate()
+        print(f"  Accel #{i}  {speed_bar(new_speed)}")
+    
