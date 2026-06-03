@@ -22,3 +22,14 @@ class Pet:
     def set_animal_type(self, animal_type: str):
         if not isinstance(animal_type, str) or not animal_type.strip():
             raise ValueError("Animal type must be a non-empty string.")
+        
+        normalised = animal_type.strip().title()
+
+        if normalised in VALID_TYPES:
+            self.__animal_type = normalised
+        else:
+            print(
+                f"  ℹ  '{animal_type}' is not in the known types list. "
+                f"Storing as-is."
+            )
+            self.__animal_type = normalised
