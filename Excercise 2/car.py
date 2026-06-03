@@ -18,3 +18,6 @@ class Car:
 
         self.__total_accelerations = 0
         self.__total_brakes        = 0
+        
+    def get_year_model(self) -> int:
+        return self.__year_model
