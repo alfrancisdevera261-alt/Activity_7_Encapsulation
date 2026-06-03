@@ -94,10 +94,11 @@ def main():
         Pet("Thumper",  "Rabbit", 4),
     ]
 
-    # Step 9a: Loop through the list and print each pet.
-    # Each print() call triggers the pet's __str__ method.
     for p in pets:
         print(f"  {p}")
 
     print_separator()
     print("  All tests complete.\n")
+    
+if __name__ == "__main__":
+    main()
