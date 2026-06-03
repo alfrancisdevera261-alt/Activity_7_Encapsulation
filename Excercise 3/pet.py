@@ -38,3 +38,14 @@ class Pet:
         if not isinstance(age, int) or age < 0:
             raise ValueError("Age must be a non-negative integer.")
         self.__age = age
+    
+    def get_name(self) -> str:
+        return self.__name
+
+    # STEP 7: Getter for animal type.
+    def get_animal_type(self) -> str:
+        return self.__animal_type
+
+    # STEP 8: Getter for age.
+    def get_age(self) -> int:
+        return self.__age
