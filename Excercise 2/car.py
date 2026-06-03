@@ -11,4 +11,7 @@ class Car:
         
         if not isinstance(make, str) or not make.strip():
             raise ValueError("Make must be a non-empty string.")
-    
+        
+        self.__year_model = year_model
+        self.__make       = make.strip()  
+        self.__speed      = 0             
