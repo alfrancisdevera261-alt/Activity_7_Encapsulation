@@ -73,3 +73,12 @@ class Fan:
             self.__speed -= 1
         else:
             print("Fan is already at minimum speed (SLOW).")
+    
+    def __str__(self):
+        status = "ON" if self.__on else "OFF"
+        return (
+            f"Fan [{self.__color.upper()}] | "
+            f"Speed: {self.get_speed_label()} ({self.__speed}) | "
+            f"Radius: {self.__radius} in | "
+            f"Status: {status}"
+        )
