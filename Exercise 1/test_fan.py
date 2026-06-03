@@ -42,3 +42,6 @@ def main():
     print("\n[ Updated Fan Configurations ]\n")
     display_fan("Fan 1 (updated)", fan1)
     display_fan("Fan 2 (updated)", fan2)
+    
+    print_separator("DEMO: Validation")
+    print()
