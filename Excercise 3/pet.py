@@ -33,3 +33,8 @@ class Pet:
                 f"Storing as-is."
             )
             self.__animal_type = normalised
+    
+    def set_age(self, age: int):
+        if not isinstance(age, int) or age < 0:
+            raise ValueError("Age must be a non-negative integer.")
+        self.__age = age
