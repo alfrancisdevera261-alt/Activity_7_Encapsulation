@@ -36,3 +36,11 @@ def main():
         new_speed = my_car.brake()
         # Step 7b: Display the loop counter and the new speed as a progress bar.
         print(f"  Brake #{i}  {speed_bar(new_speed)}")
+        
+    print()
+    print_separator("FINAL STATS")
+    stats = my_car.get_stats()   # call the stats getter
+    print(f"\n  Car                 : {stats['year_model']} {stats['make']}")
+    print(f"  Final Speed         : {stats['speed']} mph")
+    print(f"  Total Accelerations : {stats['total_accelerations']}")
+    print(f"  Total Brakes        : {stats['total_brakes']}")
