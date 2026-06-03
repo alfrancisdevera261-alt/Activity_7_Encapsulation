@@ -28,3 +28,11 @@ def main():
         new_speed = my_car.accelerate()
         print(f"  Accel #{i}  {speed_bar(new_speed)}")
     
+    print()
+    print_separator("BRAKING  ×5")
+    print()
+    for i in range(1, 6):
+        # Step 7a: Call brake() — this decreases __speed by 5 inside the object.
+        new_speed = my_car.brake()
+        # Step 7b: Display the loop counter and the new speed as a progress bar.
+        print(f"  Brake #{i}  {speed_bar(new_speed)}")
