@@ -13,3 +13,8 @@ class Pet:
             self.set_animal_type(animal_type)
         if age:
             self.set_age(age)
+
+    def set_name(self, name: str):
+        if not isinstance(name, str) or not name.strip():
+            raise ValueError("Name must be a non-empty string.")
+        self.__name = name.strip().title()
