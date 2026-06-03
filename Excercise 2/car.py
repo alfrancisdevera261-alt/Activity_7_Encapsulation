@@ -21,3 +21,6 @@ class Car:
         
     def get_year_model(self) -> int:
         return self.__year_model
+    
+    def get_make(self) -> str:
+        return self.__make
