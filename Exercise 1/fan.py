@@ -51,3 +51,8 @@ class Fan:
         if not isinstance(radius, (int, float)) or radius <= 0:
             raise ValueError("Radius must be a positive number.")
         self.__radius = float(radius)
+        
+    def set_color(self, color):
+        if not isinstance(color, str) or not color.strip():
+            raise ValueError("Color must be a non-empty string.")
+        self.__color = color.strip()
