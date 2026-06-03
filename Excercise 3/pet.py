@@ -49,3 +49,23 @@ class Pet:
     # STEP 8: Getter for age.
     def get_age(self) -> int:
         return self.__age
+    
+    def age_description(self) -> str:
+        a = self.__age
+        t = self.__animal_type.lower()  
+
+        if t in ("dog", "cat"):
+            if a <= 1:  return "baby (< 1 yr)"
+            if a <= 3:  return "young adult"
+            if a <= 8:  return "adult"
+            return "senior"
+        
+        elif t == "bird":
+            if a <= 1:  return "chick/fledgling"
+            if a <= 5:  return "juvenile"
+            return "mature"
+        
+        else:
+            if a == 0:  return "newborn"
+            # "year" vs "years" — handle singular correctly.
+            return f"{a} year{'s' if a != 1 else ''} old"
