@@ -15,3 +15,6 @@ class Car:
         self.__year_model = year_model
         self.__make       = make.strip()  
         self.__speed      = 0             
+
+        self.__total_accelerations = 0
+        self.__total_brakes        = 0
