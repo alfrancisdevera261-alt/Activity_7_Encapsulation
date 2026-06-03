@@ -34,3 +34,10 @@ class Fan:
     
     def get_color(self):
         return self.__color
+    
+    def set_speed(self, speed):
+        if speed not in (Fan.SLOW, Fan.MEDIUM, Fan.FAST):
+            raise ValueError(
+                f"Invalid speed '{speed}'. Use Fan.SLOW, Fan.MEDIUM, or Fan.FAST."
+            )
+        self.__speed = speed
