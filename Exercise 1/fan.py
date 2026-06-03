@@ -62,3 +62,14 @@ class Fan:
     
     def turn_off(self):
         self.__on = False
+        
+    def increase_speed(self):
+        if self.__speed < Fan.FAST:
+            self.__speed += 1  
+            print("Fan is already at maximum speed (FAST).")
+
+    def decrease_speed(self):
+        if self.__speed > Fan.SLOW:
+            self.__speed -= 1
+        else:
+            print("Fan is already at minimum speed (SLOW).")
