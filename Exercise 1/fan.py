@@ -46,3 +46,8 @@ class Fan:
         if not isinstance(on, bool):
             raise TypeError("'on' must be a boolean value (True or False).")
         self.__on = on
+    
+    def set_radius(self, radius):
+        if not isinstance(radius, (int, float)) or radius <= 0:
+            raise ValueError("Radius must be a positive number.")
+        self.__radius = float(radius)
