@@ -46,3 +46,17 @@ class Car:
         if not isinstance(make, str) or not make.strip():
             raise ValueError("Make must be a non-empty string.")
         self.__make = make.strip()
+        
+    def accelerate(self) -> int:
+        self.__speed = min(self.__speed + Car.SPEED_INCREMENT, Car.MAX_SPEED)
+        self.__total_accelerations += 1
+        return self.__speed
+
+    def brake(self) -> int:
+        self.__speed = max(self.__speed - Car.SPEED_DECREMENT, Car.MIN_SPEED)
+        self.__total_brakes += 1
+        return self.__speed
+
+    def full_stop(self):
+        self.__speed = 0
+        print(f"  🛑 {self.__make} came to a full stop.")
