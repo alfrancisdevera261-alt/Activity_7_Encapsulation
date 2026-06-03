@@ -15,3 +15,9 @@ def speed_bar(speed, max_speed=200, bar_width=30):
 
 def main():
     print_separator("CAR CLASS DEMO")
+    
+    my_car = Car(year_model=2024, make="Toyota GR86")
+
+    print(f"\n  Vehicle  : {my_car.get_make()}")        # calls get_make()
+    print(f"  Year     : {my_car.get_year_model()}")    # calls get_year_model()
+    print(f"  Speed    : {my_car.get_speed()} mph\n")   # calls get_speed()
