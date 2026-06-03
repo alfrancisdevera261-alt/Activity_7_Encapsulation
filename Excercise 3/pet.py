@@ -18,3 +18,7 @@ class Pet:
         if not isinstance(name, str) or not name.strip():
             raise ValueError("Name must be a non-empty string.")
         self.__name = name.strip().title()
+    
+    def set_animal_type(self, animal_type: str):
+        if not isinstance(animal_type, str) or not animal_type.strip():
+            raise ValueError("Animal type must be a non-empty string.")
