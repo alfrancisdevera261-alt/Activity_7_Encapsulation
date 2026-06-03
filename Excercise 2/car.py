@@ -41,3 +41,8 @@ class Car:
         if not isinstance(year_model, int) or year_model < 1886:
             raise ValueError("Year model must be an integer >= 1886.")
         self.__year_model = year_model
+    
+    def set_make(self, make: str):
+        if not isinstance(make, str) or not make.strip():
+            raise ValueError("Make must be a non-empty string.")
+        self.__make = make.strip()
