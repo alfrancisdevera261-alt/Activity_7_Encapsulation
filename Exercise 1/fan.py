@@ -82,3 +82,9 @@ class Fan:
             f"Radius: {self.__radius} in | "
             f"Status: {status}"
         )
+    
+    def __repr__(self):
+        return (
+            f"Fan(speed={self.__speed}, radius={self.__radius}, "
+            f"color='{self.__color}', on={self.__on})"
+        )
