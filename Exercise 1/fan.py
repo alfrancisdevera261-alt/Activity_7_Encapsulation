@@ -56,3 +56,9 @@ class Fan:
         if not isinstance(color, str) or not color.strip():
             raise ValueError("Color must be a non-empty string.")
         self.__color = color.strip()
+    
+    def turn_on(self):
+        self.__on = True
+    
+    def turn_off(self):
+        self.__on = False
