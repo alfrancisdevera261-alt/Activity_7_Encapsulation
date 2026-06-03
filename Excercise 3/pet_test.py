@@ -14,3 +14,12 @@ def prompt_name() -> str:
         if name:
             return name
         print("  ⚠  Name cannot be empty. Try again.")
+    
+def prompt_animal_type() -> str:
+    known = sorted(VALID_TYPES)
+    print(f"\n  Known types: {', '.join(known)}")
+    while True:
+        animal_type = input("  Enter your pet's animal type: ").strip()
+        if animal_type:
+            return animal_type
+        print("  ⚠  Animal type cannot be empty. Try again.")
