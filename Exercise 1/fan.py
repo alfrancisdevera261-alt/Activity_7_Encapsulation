@@ -14,3 +14,8 @@ class Fan:
         self.__radius = None
         self.__color  = None
         self.__on     = None
+        
+        self.set_speed(speed)
+        self.set_radius(radius)
+        self.set_color(color)
+        self.set_on(on)
