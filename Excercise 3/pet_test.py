@@ -83,3 +83,21 @@ def main():
     display_pet(my_pet)
 
     demo_setters(my_pet)
+    
+    print_separator("BONUS: Pre-built Pets")
+    print()
+    pets = [
+        Pet("Buddy",    "Dog",    3),
+        Pet("Whiskers", "Cat",    7),
+        Pet("Tweety",   "Bird",   1),
+        Pet("Nemo",     "Fish",   2),
+        Pet("Thumper",  "Rabbit", 4),
+    ]
+
+    # Step 9a: Loop through the list and print each pet.
+    # Each print() call triggers the pet's __str__ method.
+    for p in pets:
+        print(f"  {p}")
+
+    print_separator()
+    print("  All tests complete.\n")
