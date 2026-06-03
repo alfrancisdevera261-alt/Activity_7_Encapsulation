@@ -24,3 +24,21 @@ def main():
     print("\n[ Initial Fan Configurations ]\n")
     display_fan("Fan 1", fan1)
     display_fan("Fan 2", fan2)
+    
+    print_separator("DEMO: Modifying Fans")
+
+    print("\n  → Turning Fan 2 ON and increasing its speed twice...\n")
+
+    fan2.turn_on()
+
+    fan2.increase_speed()
+
+    fan2.increase_speed()
+
+    print("\n  → Slowing Fan 1 down one step...\n")
+    
+    fan1.decrease_speed()
+    
+    print("\n[ Updated Fan Configurations ]\n")
+    display_fan("Fan 1 (updated)", fan1)
+    display_fan("Fan 2 (updated)", fan2)
