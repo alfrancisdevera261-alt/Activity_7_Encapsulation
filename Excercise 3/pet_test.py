@@ -23,3 +23,10 @@ def prompt_animal_type() -> str:
         if animal_type:
             return animal_type
         print("  ⚠  Animal type cannot be empty. Try again.")
+
+def prompt_age() -> int:
+    while True:
+        raw = input("  Enter your pet's age (in years): ").strip()
+        if raw.isdigit():
+            return int(raw)
+        print("  ⚠  Age must be a whole non-negative number. Try again.")
